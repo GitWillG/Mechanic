@@ -6,6 +6,9 @@ namespace StudPoker
 {
     public static class ListExtentions
     {
+        //TODO: Rahul extensions.
+        //Also, whenever using code snip bits from the web make sure to rename things as needed to match the project's code style.
+        //Make sure the code makes sense too.
 
         /// <summary>
         /// Shuffles the element order of the specified list.

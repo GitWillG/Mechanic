@@ -26,6 +26,10 @@ namespace StudPoker
         
         }
 
+        //TODO: Rahul - separate this logic into an another file where you can create a deck of cards in the project folder instead.
+        //Then manually go in and add images to each card.
+        //Finally at the start of this script, find all the scriptable object cards in the project folder (whatever path you choose)
+        //And add them all to a new list to be used here. You might need to "CreateInstance" with the data in the project folder and then use that at runtime, so you don't fuck up the base data.
         public void CreateDeck()
         {
             for (int i = 0; i < uniqueCards; i++)

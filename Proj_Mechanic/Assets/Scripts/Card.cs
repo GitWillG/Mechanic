@@ -16,6 +16,8 @@ namespace StudPoker
             public int suitNo;
         //public string name;
             //public Sprite cardImage;
+            
+            //TODO: Rahul - Scriptable Objects, and MonoBehaviours both override the constructors of scripts, so you should not have these here, potential to mess up 
             public Card(int number, int suit)
             {
                 cardNo = number;

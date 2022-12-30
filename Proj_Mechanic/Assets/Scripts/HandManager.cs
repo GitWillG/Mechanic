@@ -6,6 +6,14 @@ namespace StudPoker
 {
     public class HandManager : MonoBehaviour
     {
+        //TODO: Rahul - For all scripts, figure out what data needs to be public and what can be private and finally what needs to be public fot the editor only(Serialized field)
+        //Also follow the same naming convention
+        //Class names       PascalCase
+        //Public variable   camelCase
+        //Private variable  _camelCase
+        //Properties        PascalCase
+        //Method names      PascalCase
+        //Constants         
         public DeckQueue deckObject;
         public GameObject cardPrefab;
         private int swapChances;
@@ -48,6 +56,7 @@ namespace StudPoker
         {
             foreach (Transform slot in cardSlots)
             {
+                //TODO: You can invert this if statement to reduce some nesting and make it cleaner to read.
                 if (slot.childCount < 1)
                 {
                     Debug.Log(slot.name);
@@ -56,6 +65,7 @@ namespace StudPoker
             }
 
         }
+        //TODO: Rahul - consistency with naming conventions
         public void swapCards()
         {
             for (int i = 0; i < CardObjects.Length; i++)
