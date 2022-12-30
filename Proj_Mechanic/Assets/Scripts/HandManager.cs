@@ -16,13 +16,13 @@ namespace StudPoker
         //Constants         
         public DeckQueue deckObject;
         public GameObject cardPrefab;
-        private int swapChances;
+        private int _swapChances;
         public List<Transform> cardSlots = new List<Transform>();
         public CardGO[] CardObjects = new CardGO[5];
         // Start is called before the first frame update
         void Start()
         {
-            swapChances = 3;
+            _swapChances = 3;
             foreach (Transform child in transform)
             {
                 cardSlots.Add(child);
@@ -30,11 +30,6 @@ namespace StudPoker
         
         }
 
-        // Update is called once per frame
-        void Update()
-        {
-        
-        }
         public void DrawCard(Transform drawLocation)
         {
             GameObject newCard = Instantiate(cardPrefab, drawLocation);
@@ -56,17 +51,12 @@ namespace StudPoker
         {
             foreach (Transform slot in cardSlots)
             {
-                //TODO: You can invert this if statement to reduce some nesting and make it cleaner to read.
-                if (slot.childCount < 1)
-                {
-                    Debug.Log(slot.name);
-                    DrawCard(slot);
-                }
+                if (slot.childCount >= 1) continue;
+                DrawCard(slot);
             }
 
         }
-        //TODO: Rahul - consistency with naming conventions
-        public void swapCards()
+        public void SwapCards()
         {
             for (int i = 0; i < CardObjects.Length; i++)
             {

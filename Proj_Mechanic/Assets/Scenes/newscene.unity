@@ -275,7 +275,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Redraw Selected
+  m_text: 'Shuffle Deck
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2800,7 +2802,12 @@ MonoBehaviour:
   deckObject: {fileID: 1176011844}
   cardPrefab: {fileID: 3961062780455871990, guid: f4892a8c2cb69744e9be049fdab53189, type: 3}
   cardSlots: []
-  CardObjects: []
+  CardObjects:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!65 &1916572137
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3001,7 +3008,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1916572136}
         m_TargetAssemblyTypeName: StudPoker.HandManager, Assembly-CSharp
-        m_MethodName: SwapCards
+        m_MethodName: swapCards
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

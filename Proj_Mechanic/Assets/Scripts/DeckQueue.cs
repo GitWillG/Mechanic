@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,10 +8,7 @@ namespace StudPoker
         public List<Card> cardDeck = new List<Card>();
         int uniqueCards = 13;
         int uniqueSuits = 4;
-        
-
-
-        // Start is called before the first frame update
+       
         void Start()
         {
             CreateDeck();
@@ -20,7 +16,6 @@ namespace StudPoker
       
         }
 
-        // Update is called once per frame
         void Update()
         {
         
@@ -37,11 +32,8 @@ namespace StudPoker
                 for (int j = 0; j < uniqueSuits; j++)
                 {
                     Card newcard = ScriptableObject.CreateInstance<Card>();
-                    //newcardcardManager.createCard(i, j);
                     newcard.InitCard(i, j);
                     cardDeck.Add(newcard);
-                    //create card
-                    //enqueue card
                 }
 
             }
